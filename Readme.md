@@ -1,11 +1,13 @@
-A script for comparing the top results of a subreddit week over week
+A script for comparing the best results of a subreddit week over week. 
 
 ## Setup
 
 ### External tools required
 - exiftool
 - imagemagick
-- praw
+- praw (a reddit wrapper for python)
+
+#### Environment
 
 ```bash
 # file: ~/.../reddit-secrets.sh 
@@ -19,6 +21,35 @@ export SUBREDDIT_SUMMARY_OUTPUT_DIR="/Users/MyUser/myUsername"
 source ~/.../reddit-secrets.sh
 ```
 
+## Usage 
+
+```
+usage: subreddit_summary.py [-h] [-c] [-a] [subreddits ...]
+
+A script that will create a summary of the most popular posts in a given subreddit.
+
+positional arguments:
+  subreddits
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -c, --condense  condense multiple summary results from the same subreddit into one image
+  -a, --all       By default, we only get the 'Hot' results, which are trending. By passing in this flag, we will also
+                  generate results for top=day, top=week and top=month.
+```
+
 ## Example
 
+```bash
+./subreddit_summary.py wallpapers
+```
+![wallpapers-hot-2022 06 12-21 43 52](https://user-images.githubusercontent.com/10187351/173271012-6bdac67b-03cc-4cdc-88a0-cc375d1a9491.jpg)
+
+
+```bash
+./subreddit_summary.py wallpapers
+./subreddit_summary.py wallpapers
+./subreddit_summary.py -c wallpapers 
+```
+![hot_wallpapers](https://user-images.githubusercontent.com/10187351/173270681-70c789ac-b0d9-47fd-80c1-9b30edf961da.jpg)
 
