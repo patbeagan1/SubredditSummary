@@ -59,7 +59,7 @@ optional arguments:
 ./subreddit_summary.py wallpapers
 ./subreddit_summary.py -c wallpapers 
 ```
-![hot_wallpapers](https://user-images.githubusercontent.com/10187351/173270681-70c789ac-b0d9-47fd-80c1-9b30edf961da.jpg)
+![hot_wallpapers](https://user-images.githubusercontent.com/10187351/173473035-4b58fd98-d28e-4250-a551-c57a4faeaeae.jpg)
 
 ### Generating **all** summaries (`hot`, `top_month`, `top_week`, `top_day`)
 
